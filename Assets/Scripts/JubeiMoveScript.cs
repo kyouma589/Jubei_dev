@@ -13,6 +13,8 @@ public class JubeiMoveScript : MonoBehaviour
 
     public float speed = 10f;
 
+    public float RaycastDetect = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,13 +24,26 @@ public class JubeiMoveScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Ray JubeiJump = new Ray(transform.position, -transform.up);
+
+        Debug.DrawRay(JubeiJump.origin, JubeiJump.direction * RaycastDetect, Color.magenta);
+
         // UP AND DOWN ON THE CONTRLLER
         forwardBackward = Input.GetAxis("Vertical");
 
         //Right and Left for controller
         rightLeft = Input.GetAxis("Horizontal");
 
-        
+        if (Physics.Raycast(JubeiJump, RaycastDetect))
+        {
+
+            if (Input.GetButtonDown("Jump"))
+            {
+
+                thisRigidbody.AddForce((transform.up * JumpForce), ForceMode.Impulse);
+            }
+
+        }
 
 
 
@@ -39,11 +54,7 @@ public class JubeiMoveScript : MonoBehaviour
         //anything with rigidbody should go in fixed update
         thisRigidbody.AddForce((transform.forward) * forwardBackward * speed, ForceMode.Impulse);
 
-        if (Input.GetButtonDown("Jump"))
-        {
-
-            thisRigidbody.AddForce((transform.up * JumpForce), ForceMode.Impulse);
-        }
+      
         thisRigidbody.AddTorque(new Vector3(0, rightLeft * rotationSpeed, 0), ForceMode.Impulse);
 
     }

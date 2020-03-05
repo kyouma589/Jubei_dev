@@ -480,8 +480,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.323188, y: 2.6644738, z: 1.9699467}
-  m_Center: {x: -1.1615924, y: -0.33223677, z: 0.015026946}
+  m_Size: {x: 4.323188, y: 2.7919526, z: 1.9699467}
+  m_Center: {x: -1.1615926, y: -0.26849797, z: 0.015026946}
 --- !u!1 &292440161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,7 +1049,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 1.8267603
-  m_Height: 8.855762
+  m_Height: 5.4
   m_Direction: 2
   m_Center: {x: 0.42353755, y: 0.775823, z: -1.572622}
 --- !u!54 &895053441
@@ -1099,6 +1099,7 @@ MonoBehaviour:
   rotationSpeed: 0.4
   JumpForce: 9
   speed: 0.5
+  RaycastDetect: 1
 --- !u!1 &1007796903
 GameObject:
   m_ObjectHideFlags: 0
@@ -2332,12 +2333,12 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 53c5038f7dc9ff244a56a75b841c0675,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.53
+      value: 0.59
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 53c5038f7dc9ff244a56a75b841c0675,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.52
+      value: -3.23
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 53c5038f7dc9ff244a56a75b841c0675,
         type: 3}
@@ -2394,6 +2395,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.10912363
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: 53c5038f7dc9ff244a56a75b841c0675,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5fbf99054c24f0f4b9bf31b884c542b5, type: 2}
     - target: {fileID: -927199367670048503, guid: 53c5038f7dc9ff244a56a75b841c0675,
         type: 3}
       propertyPath: m_Name
@@ -2544,8 +2550,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.806129, y: 2.6644738, z: 1.9999994}
-  m_Center: {x: -1.4030671, y: -0.33223674, z: -0.000000027470033}
+  m_Size: {x: 4.806129, y: 2.9177465, z: 1.9999994}
+  m_Center: {x: -1.403068, y: -0.20560116, z: -0.00000005321678}
 --- !u!4 &1950173951 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 9a8e2f7f7f58ec94f9d1133b8d8fdfca,
@@ -2720,6 +2726,7 @@ MonoBehaviour:
   rotationSpeed: 0.3
   JumpForce: 2
   speed: 0.48
+  RaycastDetect: 1
 --- !u!54 &2002636747
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2937,7 +2944,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: f58ee576197824f489a12d8b643fcddf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.01
+      value: 15.75
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f58ee576197824f489a12d8b643fcddf,
         type: 3}
