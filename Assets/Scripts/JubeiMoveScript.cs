@@ -9,6 +9,7 @@ public class JubeiMoveScript : MonoBehaviour
     public float forwardBackward;
     public float rightLeft;
     public float rotationSpeed = 5f;
+    public float JumpForce = 2f;
 
     public float speed = 10f;
 
@@ -27,6 +28,8 @@ public class JubeiMoveScript : MonoBehaviour
         //Right and Left for controller
         rightLeft = Input.GetAxis("Horizontal");
 
+        
+
 
 
     }
@@ -36,6 +39,11 @@ public class JubeiMoveScript : MonoBehaviour
         //anything with rigidbody should go in fixed update
         thisRigidbody.AddForce((transform.forward) * forwardBackward * speed, ForceMode.Impulse);
 
+        if (Input.GetButtonDown("Jump"))
+        {
+
+            thisRigidbody.AddForce((transform.up * JumpForce), ForceMode.Impulse);
+        }
         thisRigidbody.AddTorque(new Vector3(0, rightLeft * rotationSpeed, 0), ForceMode.Impulse);
 
     }
