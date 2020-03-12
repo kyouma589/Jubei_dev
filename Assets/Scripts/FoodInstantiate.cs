@@ -27,9 +27,13 @@ public class FoodInstantiate : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        foodBowlFill.SetActive(true);
-        foodBowlEmpty.SetActive(false);
-        Debug.Log("food bowl is now full " + other.name);
-        GetComponent<BoxCollider>().enabled = false;
+        if (other.CompareTag("Player")) 
+        {
+
+            foodBowlFill.SetActive(true);
+            foodBowlEmpty.SetActive(false);
+            Debug.Log("food bowl is now full " + other.name);
+            GetComponent<BoxCollider>().enabled = false;
+        }
     }
 }
