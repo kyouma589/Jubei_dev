@@ -25,7 +25,7 @@ public class FoodInteract : MonoBehaviour
         distanceToFood = Vector3.Distance(this.transform.position, destinationFood.transform.position);
         Debug.Log(distanceToFood);
 
-        if (distanceToFood <= 2 && FoodInstantiate.foodBowlFill.activeSelf == true)
+        if (distanceToFood <= 2.5 && FoodInstantiate.foodBowlFill.activeSelf == true)
         {
             Debug.Log("hello");
             Dialogue.text = "Press 'E' to eat food.";
