@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    FoodInteract FoodInteract;
+
     // Start is called before the first frame update
     void Start()
     {
