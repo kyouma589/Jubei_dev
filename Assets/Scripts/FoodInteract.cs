@@ -9,6 +9,9 @@ public class FoodInteract : MonoBehaviour
     public GameObject destinationFood;
     public float distanceToFood;
     public Text Dialogue;
+    public bool foodEaten = false;
+    public bool foodRange = false;
+    
   
 
 
@@ -23,11 +26,12 @@ public class FoodInteract : MonoBehaviour
     {
 
         distanceToFood = Vector3.Distance(this.transform.position, destinationFood.transform.position);
-        Debug.Log(distanceToFood);
+        //Debug.Log(distanceToFood);
 
         if (distanceToFood <= 2.5 && FoodInstantiate.foodBowlFill.activeSelf == true)
         {
             Debug.Log("hello");
+            foodRange = true;
             Dialogue.text = "Press 'E' to eat food.";
 
             if (Input.GetKeyDown(KeyCode.E))
@@ -35,14 +39,19 @@ public class FoodInteract : MonoBehaviour
                 //if (FoodInstantiate != null)
                 //{
                 FoodInstantiate.foodBowlFill.SetActive(false);
+                foodEaten = true;
 
                 //}
             }
 
         }
 
-        else
+       if (distanceToFood >= 2.5 && foodEaten == true && foodRange == true)
+        {
             Dialogue.text = "";
+            foodRange = false;
+
+        }
        
 
     }
