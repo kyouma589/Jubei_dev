@@ -11,6 +11,7 @@ public class FoodInteract : MonoBehaviour
     public Text Dialogue;
     public bool foodEaten = false;
     public bool foodRange = false;
+    public int eatenCounter = 0;
     
   
 
@@ -40,7 +41,7 @@ public class FoodInteract : MonoBehaviour
                 //{
                 FoodInstantiate.foodBowlFill.SetActive(false);
                 foodEaten = true;
-
+                eatenCounter += 1;
                 //}
             }
 

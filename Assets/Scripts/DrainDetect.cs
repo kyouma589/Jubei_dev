@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class DrainDetect : MonoBehaviour
 {
     public float drainDistance;
+    public AudioSource angryCat;
     public GameObject drainDestination;
     public Text Dialogue;
     public int sniffCounter = 0;
@@ -34,6 +35,7 @@ public class DrainDetect : MonoBehaviour
             {
                 Debug.Log("You have sniffed");
                 sniffCounter += 1;
+                angryCat.Play();
 
             }
 
