@@ -35,7 +35,7 @@ public class DrainDetect : MonoBehaviour
             {
                 Debug.Log("You have sniffed");
                 sniffCounter += 1;
-                angryCat.Play();
+                angryCat.Play();    
 
             }
 
