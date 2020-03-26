@@ -30,7 +30,15 @@ public class UIManager : MonoBehaviour
             reqsMet = true;
         }
 
+        if (reqsMet == true)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            reqsMet = false;
+
+        }
+
     }
 
+   
    
 }
